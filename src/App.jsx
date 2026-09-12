@@ -1,14 +1,10 @@
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./pages/Home/Home";
-import "./App.css";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
 
-function App() {
-  return (
-    <div className="app">
-      <Navbar />
-      <Home />
-    </div>
-  );
-}
-
-export default App;
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);
